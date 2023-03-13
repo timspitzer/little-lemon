@@ -1,15 +1,16 @@
 import "./App.css";
-import Footer from "./components/footer/Footer.js";
-import Header from "./components/header/Header.js";
-import Main from "./components/main/Main.js";
+import HighlightsSection from "./components/highlights-section/HighlightsSection.js";
+import TestimonialSection from "./components/testimonials-section/TestimonialSection.js";
+import AboutSection from "./components/about-section/AboutSection.js";
+import Layout from "./layouts/layout/Layout.js";
 
 function App() {
   return (
-    <>
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
-    </>
+    <Layout>
+      <HighlightsSection></HighlightsSection>
+      <TestimonialSection></TestimonialSection>
+      <AboutSection></AboutSection>
+    </Layout>
   );
 }
 
