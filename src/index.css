@@ -7,7 +7,6 @@ body {
   font-family: "Markazi Text";
   font-size: 64px;
   font-weight: 500;
-  color: #f4ce14;
   margin: 0;
 }
 
@@ -67,6 +66,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   transition: background-color 200ms ease-in-out, transform 150ms ease;
+  cursor: pointer;
 }
 
 button:hover,
@@ -129,9 +129,10 @@ main {
   position: relative;
 }
 
-.hero-layout-helper > h1 {
+.hero-layout-helper > .display-title {
   margin-top: 20px;
   line-height: 0.5;
+  color: #f4ce14;
 }
 
 .hero-layout-helper img.restauran-food {
@@ -148,6 +149,75 @@ main {
   margin-top: 150px;
   grid-column: 3 /11;
 }
+
+.highlights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.highlights-section .cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.highlights-section article {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.card {
+  background-color: #edefee;
+}
+
+.card,
+.card img {
+  border-radius: 15px 15px 0 0;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card .text {
+  margin: 20px;
+}
+
+.card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .header span {
+  color: #ee9972;
+}
+
+.card button {
+  color: #000000;
+  background-color: initial;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 50px 0 20px 0;
+}
+
+.card button:hover,
+button:focus {
+  background-color: initial;
+}
+
+.card button:active {
+  transform: scale(0.99);
+}
+
 .testimonials-section {
   grid-column: 3 /11;
 }
