@@ -17,19 +17,27 @@ const testimonials = [
     message: "Best salad ever",
     id: crypto.randomUUID(),
   },
+  {
+    name: "Jo",
+    message: "Best salad never",
+    id: crypto.randomUUID(),
+  },
 ];
 
 export default function TestimonialSection() {
   return (
     <section className="testimonials-section">
-      {testimonials.map(({ rating, name, message, id }) => (
-        <Testimonial
-          key={id}
-          rating={rating}
-          name={name}
-          message={message}
-        ></Testimonial>
-      ))}
+      <h2 className="sub-title">Testimonials</h2>
+      <div>
+        {testimonials.map(({ rating, name, message, id }) => (
+          <Testimonial
+            key={id}
+            rating={rating}
+            name={name}
+            message={message}
+          ></Testimonial>
+        ))}
+      </div>
     </section>
   );
 }

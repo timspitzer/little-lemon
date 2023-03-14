@@ -25,10 +25,12 @@ const specials = [
   },
 ];
 
-const specialsWithId = specials.map((special) => ({
-  ...special,
-  id: crypto.randomUUID(),
-}));
+const specialsWithIdAndFixedDecimal = specials
+  .map((special) => ({
+    ...special,
+    id: crypto.randomUUID(),
+  }))
+  .map((special) => ({ ...special, price: special.price.toFixed(2) }));
 
 export default function HighlightsSection() {
   return (
@@ -38,15 +40,17 @@ export default function HighlightsSection() {
         <button>Online Menu</button>
       </div>
       <div className="cards">
-        {specialsWithId.map(({ name, price, description, img, id }) => (
-          <Card
-            key={id}
-            title={name}
-            price={price}
-            description={description}
-            img={img}
-          ></Card>
-        ))}
+        {specialsWithIdAndFixedDecimal.map(
+          ({ name, price, description, img, id }) => (
+            <Card
+              key={id}
+              title={name}
+              price={price}
+              description={description}
+              img={img}
+            ></Card>
+          )
+        )}
       </div>
     </section>
   );

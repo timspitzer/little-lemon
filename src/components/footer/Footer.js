@@ -4,6 +4,9 @@ export default function Footer() {
   return (
     <footer>
       <section>
+        <img src="/icons_assets/restaurant.jpg" alt="restaureant wide shot" />
+      </section>
+      <section>
         <h3>Doormat Navigation</h3>
         <Nav></Nav>
       </section>

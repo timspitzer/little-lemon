@@ -15,7 +15,6 @@ body {
   font-size: 40px;
   font-weight: 400;
   margin: 0;
-  color: #edefee;
 }
 
 .lead-text {
@@ -91,7 +90,7 @@ header {
 }
 
 header > .logo {
-  margin: 20px;
+  margin: 20px 0;
 }
 
 header ul {
@@ -111,6 +110,7 @@ header ul > li > a {
 }
 
 main {
+  margin-bottom: 200px;
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -133,6 +133,9 @@ main {
   margin-top: 20px;
   line-height: 0.5;
   color: #f4ce14;
+}
+.hero-layout-helper > .sub-title {
+  color: #edefee;
 }
 
 .hero-layout-helper img.restauran-food {
@@ -219,12 +222,83 @@ button:focus {
 }
 
 .testimonials-section {
-  grid-column: 3 /11;
-}
-.about-section {
+  margin: 200px 0;
   grid-column: 3 /11;
 }
 
+.testimonials-section div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.testimonials-section .sub-title {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.about-section {
+  display: flex;
+  grid-column: 3 /11;
+  justify-content: space-between;
+}
+
+.about-section .display-title {
+  line-height: 0.5;
+}
+
+.about-section p {
+  max-width: 30ch;
+}
+
+.about-section > section:nth-child(2) {
+  position: relative;
+}
+
+.about-section img {
+  object-fit: cover;
+  width: 250px;
+  height: 300px;
+  position: absolute;
+}
+
+.about-section img:nth-child(1) {
+  top: 25%;
+  left: 40%;
+}
+
+.about-section img:nth-child(2) {
+  top: 0px;
+  left: calc(40% + 150px);
+}
 footer {
   grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+footer > section:first-child {
+  text-align: center;
+}
+
+footer > section:first-child img {
+  width: 85%;
+  height: 250px;
+  object-fit: cover;
+}
+
+footer > section {
+  flex: 1 1 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: #000000;
 }
