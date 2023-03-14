@@ -243,6 +243,10 @@ button:focus {
   justify-content: space-between;
 }
 
+.about-section > section:nth-child(2) {
+  flex: 1 1 0;
+}
+
 .about-section .display-title {
   line-height: 0.5;
 }

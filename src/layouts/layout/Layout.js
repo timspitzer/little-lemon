@@ -7,7 +7,6 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <Header></Header>
-      <HeroSection></HeroSection>
       <Main>{children}</Main>
       <Footer></Footer>
     </div>
