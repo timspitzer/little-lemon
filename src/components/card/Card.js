@@ -9,8 +9,10 @@ export default function Card({ title, price, description, img, id }) {
           <h3>{title}</h3>
           <span>${price}</span>
         </div>
-        <p>{description}</p>
-        <button>Order a delivery </button>
+        <div class="description">
+          <p>{description}</p>
+          <button>Order a delivery </button>
+        </div>
       </div>
     </article>
   );

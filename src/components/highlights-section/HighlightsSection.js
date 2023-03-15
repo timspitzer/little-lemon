@@ -5,21 +5,21 @@ const specials = [
   {
     name: "Greek Salad",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quas id, officiis ducimus soluta quos tenetur velit consequatur nulla possimus culpa, sed quibusdam reiciendis repellat aperiam iste dicta iure ratione.",
+      "Craving a fresh and healthy salad? Look no further than our Greek salad! Made with crisp lettuce, juicy tomatoes, sliced cucumbers, and tangy Kalamata olives, our salad is topped with crumbled feta cheese and a zesty vinaigrette dressing.",
     price: 12.99,
     img: "/icons_assets/greek salad.jpg",
   },
   {
     name: "Bruchetta",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quas id, officiis ducimus soluta quos tenetur velit consequatur nulla possimus culpa, sed quibusdam reiciendis repellat aperiam iste dicta iure ratione.",
+      "Try our bruschetta! Made with freshly toasted bread and topped with a flavorful combination of diced tomatoes, garlic, and basil, it's the perfect blend of savory and tangy.",
     price: 5.99,
     img: "/icons_assets/bruchetta.svg",
   },
   {
     name: "Lemon Dessert",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quas id, officiis ducimus soluta quos tenetur velit consequatur nulla possimus culpa, sed quibusdam reiciendis repellat aperiam iste dicta iure ratione.",
+      "Looking for a tangy dessert? Try our lemon dessert made with fresh lemons for a sweet and sour taste. Perfect for any occasion, it's a refreshing and light option that's sure to please. Order online today and taste the zesty flavors for yourself!",
     price: 5.0,
     img: "/icons_assets/lemon dessert.jpg",
   },
@@ -36,7 +36,7 @@ export default function HighlightsSection() {
   return (
     <section className="highlights-section">
       <div className="highlights-header">
-        <h1 className="display-title">This weeks specials!</h1>
+        <h2>This weeks specials!</h2>
         <button>Online Menu</button>
       </div>
       <div className="cards">

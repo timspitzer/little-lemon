@@ -1,54 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Karla";
   margin: 0;
 }
 
-.display-title {
+h1 {
   font-family: "Markazi Text";
   font-size: 64px;
   font-weight: 500;
   margin: 0;
 }
 
-.sub-title {
+h2 {
   font-family: "Markazi Text";
   font-size: 40px;
   font-weight: 400;
   margin: 0;
 }
 
-.lead-text {
-  font-weight: 400;
-  font-size: 18px;
-}
-
-.section-title {
+.h3 {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 20px;
 }
 
-.section-categories {
+.h4 {
   font-weight: 800;
   font-size: 16px;
   color: #fff;
   max-width: 30ch;
 }
 
-.card-title {
+.h5 {
   font-size: 18px;
+}
+
+.lead-text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+
+.highlight-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
 }
 
 p {
   font-size: 16px;
   line-height: 1.5;
   max-width: 65ch;
-  color: #333333;
-}
-
-.highlight {
-  font-size: 16px;
-  font-weight: 500;
   color: #333333;
 }
 
@@ -73,227 +78,7 @@ button:active {
   transform: scale(0.99);
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-column: 3 / 11;
-}
-
-header .logo {
-  margin: 20px 0;
-}
-
-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-  white-space: nowrap;
-  color: ;
-}
-
-header ul > li > a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 800;
-}
-
-main {
-  margin-bottom: 200px;
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.hero-section {
-  background-color: #495e57;
-  grid-column: 1 /-1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  padding: 20px 0;
-}
-
-.hero-layout-helper {
-  grid-column: 3/ 11;
-  position: relative;
-}
-
-.hero-layout-helper > .display-title {
-  margin-top: 20px;
-  line-height: 0.5;
-  color: #f4ce14;
-}
-.hero-layout-helper > .sub-title {
-  color: #edefee;
-}
-
-.hero-layout-helper img.restauran-food {
-  position: absolute;
-  top: 20px;
-  width: 350px;
-  height: 380px;
-  right: 0%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.highlights-section {
-  margin-top: 150px;
-  grid-column: 3 /11;
-}
-
-.highlights-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.highlights-section .cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.highlights-section article {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-}
-
-.card {
-  background-color: #edefee;
-}
-
-.card,
-.card img {
-  border-radius: 15px 15px 0 0;
-}
-
-.card img {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-}
-
-.card .text {
-  margin: 20px;
-}
-
-.card .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card .header span {
-  color: #ee9972;
-}
-
-.card button {
-  color: #000000;
-  background-color: initial;
-  padding: 0;
-  border: none;
-  font-weight: 500;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 50px 0 20px 0;
-}
-
-.card button:active {
-  transform: scale(0.99);
-}
-
-.testimonials-section {
-  margin: 200px 0;
-  grid-column: 3 /11;
-}
-
-.testimonials-section div {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.testimonials-section .sub-title {
-  margin-bottom: 100px;
-  text-align: center;
-}
-
-.about-section {
-  display: flex;
-  grid-column: 3 /11;
-  justify-content: space-between;
-}
-
-.about-section > section:nth-child(2) {
-  flex: 1 1 0;
-}
-
-.about-section .display-title {
-  line-height: 0.5;
-}
-
-.about-section p {
-  max-width: 30ch;
-}
-
-.about-section > section:nth-child(2) {
-  position: relative;
-}
-
-.about-section img {
-  object-fit: cover;
-  width: 250px;
-  height: 300px;
-  position: absolute;
-}
-
-.about-section img:nth-child(1) {
-  top: 25%;
-  left: 40%;
-}
-
-.about-section img:nth-child(2) {
-  top: 0px;
-  left: calc(40% + 150px);
-}
-footer {
-  grid-column: 3 / 11;
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-footer > section:first-child {
-  text-align: center;
-}
-
-footer > section:first-child img {
-  width: 85%;
-  height: 250px;
-  object-fit: cover;
-}
-
-footer > section {
-  flex: 1 1 0;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer ul a {
-  text-decoration: none;
-  color: #000000;
+.disable-scroll {
+  overflow-y: hidden;
+  height: 100%;
 }

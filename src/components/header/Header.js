@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../nav/Nav.js";
 
-export default function Header({ children }) {
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header>
       <Link to="/">
@@ -11,7 +14,14 @@ export default function Header({ children }) {
           alt="Little Lemons Logo"
         ></img>
       </Link>
-      <Nav></Nav>
+      <button onClick={() => setIsOpen(!isOpen)}>
+        <img
+          src="/icons_assets/🦆 icon _hamburger menu.svg"
+          alt="hamburger menu icon"
+          width="20"
+        />
+      </button>
+      <Nav isOpen={isOpen}></Nav>
     </header>
   );
 }

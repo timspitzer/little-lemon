@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav({ isOpen }) {
   return (
-    <nav>
+    <nav className={isOpen ? "open" : ""}>
       <ul>
         <li>
           <Link to="/">Home</Link>
