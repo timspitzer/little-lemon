@@ -68,12 +68,8 @@ button {
   cursor: pointer;
 }
 
-button:hover,
-button:focus {
-  background-color: #b2970f;
-}
-
 button:active {
+  background-color: #b2970f;
   transform: scale(0.99);
 }
 
@@ -89,7 +85,7 @@ header {
   grid-column: 3 / 11;
 }
 
-header > .logo {
+header .logo {
   margin: 20px 0;
 }
 
@@ -210,11 +206,6 @@ main {
   font-size: 16px;
   cursor: pointer;
   margin: 50px 0 20px 0;
-}
-
-.card button:hover,
-button:focus {
-  background-color: initial;
 }
 
 .card button:active {
