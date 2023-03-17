@@ -34,7 +34,7 @@ const specialsWithIdAndFixedDecimal = specials
 
 export default function HighlightsSection() {
   return (
-    <section className="highlights-section">
+    <section className="highlights-section layout-item">
       <div className="highlights-header">
         <h2>This weeks specials!</h2>
         <button>Online Menu</button>

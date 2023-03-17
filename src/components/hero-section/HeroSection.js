@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function HeroSection() {
+export default function flowHeroSection() {
   return (
-    <section className="hero-section">
-      <div className="hero-layout-helper">
+    <section className="hero-section layout">
+      <div className="layout-item">
         <h1>Little Lemon</h1>
         <h2>Chigaco</h2>
         <p className="lead-text">

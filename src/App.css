@@ -1,19 +1,31 @@
-.layout {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+:root {
   --line-height-subheading: 0.6;
   --border-radius: 10px;
   --standard-margin: 20px;
 }
 
-/* HEADER BEGIN  */
+.layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 
-header {
+.layout-item {
+  grid-column: 2 / -2;
+}
+
+@media (min-width: 1280px) {
+  .layout-item {
+    grid-column: 3 / 11;
+  }
+}
+
+/* HEADER SECTION */
+
+header .layout-item {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  grid-column: 2 / -2;
 }
 
 header .logo {
@@ -48,12 +60,11 @@ header nav ul > li > a {
 }
 
 @media (min-width: 1280px) {
-  header {
-    grid-column: 3 / 11;
+  header .layout-item {
     flex-wrap: initial;
   }
 
-  header > button {
+  header button {
     display: none;
   }
 
@@ -67,54 +78,47 @@ header nav ul > li > a {
   }
 }
 
-/* HEADER END */
+/* MAIN SECTION */
 
 main {
   margin-bottom: 200px;
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
 }
 
-/* HERO SECTION BEGIN */
+/* HERO SECTION */
 
 .hero-section {
   background-color: #495e57;
-  grid-column: 1 /-1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
   padding: 20px 0;
+  grid-column: 1 / -1;
 }
 
-.hero-layout-helper {
-  grid-column: 2 / -2;
+.hero-section .layout-item {
   position: relative;
 }
 
-.hero-layout-helper > h1 {
+.hero-section h1 {
   margin-top: 20px;
   line-height: var(--line-height-subheading);
   color: #f4ce14;
 }
 
-.hero-layout-helper > h2,
-.hero-layout-helper > p {
+.hero-section h2,
+.hero-section p {
   color: #edefee;
   max-width: 40ch;
 }
 
-.hero-layout-helper img.restauran-food {
+.hero-section img.restauran-food {
   object-fit: cover;
   border-radius: var(--border-radius);
   margin: var(--standard-margin) 0;
 }
 
 @media (min-width: 1280px) {
-  .hero-layout-helper {
-    grid-column: 3 / 11;
+  .hero-section {
   }
 
-  .hero-layout-helper img.restauran-food {
+  .hero-section img.restauran-food {
     position: absolute;
     top: 20px;
     right: 0%;
@@ -122,17 +126,15 @@ main {
     height: 380px;
   }
 }
-/* HERO SECTION END */
 
-/* HIGHLIGHTS SECTION BEGIN */
+/* HIGHLIGHTS SECTION */
+
 .highlights-section {
   margin-top: 50px;
-  grid-column: 2 /-2;
 }
 
 @media (min-width: 1280px) {
   .highlights-section {
-    grid-column: 3 /11;
     margin-top: 150px;
   }
 }
@@ -220,13 +222,10 @@ main {
   transform: scale(0.99);
 }
 
-/* HIGHLIGHTS SECTION END */
-
-/* TESTIMONIALS SECTION BEGIN */
+/* TESTIMONIALS SECTION */
 
 .testimonials-section {
   margin: 200px 0;
-  grid-column: 2 / -2;
 }
 
 .testimonials-section > div {
@@ -266,7 +265,6 @@ main {
 
 @media (min-width: 1280px) {
   .testimonials-section {
-    grid-column: 3 / 11;
   }
 
   .testimonials-section > div {
@@ -275,12 +273,10 @@ main {
   }
 }
 
-/* TESTIMONIALS SECTION END */
-/* ABOUT SECTION BEGIN */
+/* ABOUT SECTION */
 
 .about-section {
   display: flex;
-  grid-column: 2 / -2;
   justify-content: space-between;
   gap: 50px;
   flex-direction: column;
@@ -318,33 +314,34 @@ main {
 
 @media (min-width: 1280px) {
   .about-section {
-    grid-column: 3 /11;
-
     flex-direction: initial;
   }
 }
 
-/* ABOUT SECTION END */
+/* FOOTER SECTION */
 
 footer {
-  grid-column: 2 / -2;
+  margin: var(--standard-margin) 0;
+}
+
+footer .layout-item {
   display: flex;
   justify-content: space-between;
   gap: 50px;
   flex-direction: column;
 }
 
-footer > section:first-child {
+footer .layout-item section:first-child {
   text-align: center;
 }
 
-footer > section:first-child img {
+footer .layout-item section:first-child img {
   width: 85%;
   height: 250px;
   object-fit: cover;
 }
 
-footer > section {
+footer .layout-item section {
   flex: 1 1 0;
 }
 
@@ -360,16 +357,15 @@ footer ul a {
 }
 
 @media (min-width: 1280px) {
-  footer {
-    grid-column: 3 / 11;
+  footer .layout-item {
     flex-direction: initial;
   }
 }
 
 form {
-  grid-column: 2 / -2;
 }
 
 @media (min-width: 1280px) {
-  grid-column: 3 / 11;
+  form {
+  }
 }

@@ -38,7 +38,7 @@ export default function TestimonialSection() {
   });
 
   return (
-    <section className="testimonials-section">
+    <section className="testimonials-section layout-item">
       <h2>Testimonials</h2>
       <div>
         {testimonialsWithData.map((testimonial) => {

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <section className="about-section">
+    <section className="about-section layout-item">
       <section>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
