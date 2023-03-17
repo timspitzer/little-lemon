@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function BookingForm({ availableTimes, setAvailableTimes }) {
   const [date, setDate] = useState("");
@@ -19,6 +19,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes }) {
 
   return (
     <form
+      className="layout-item"
       style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
       onSubmit={handleSubmit}
     >
@@ -64,7 +65,11 @@ export default function BookingForm({ availableTimes, setAvailableTimes }) {
         <option value="Birthday">Birthday</option>
         <option value="Anniversary">Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
+      <input
+        type="submit"
+        value="Make Your reservation"
+        disabled={availableTimes.length === 0}
+      />
     </form>
   );
 }

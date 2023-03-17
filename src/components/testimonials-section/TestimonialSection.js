@@ -1,6 +1,7 @@
 import React from "react";
 import Testimonial from "../testimonial/Testimonial.js";
 import { useData } from "../../hooks/useData.js";
+import { ClipLoader } from "react-spinners";
 
 const testimonials = [
   {
@@ -26,15 +27,17 @@ export default function TestimonialSection() {
     "https://dummyjson.com/users?limit=4&skip=10&select=firstName,lastName,image,id"
   );
 
-  if (!userData) return "loading";
-
-  const { users } = userData;
-  const testimonialsWithData = testimonials.map((testimonial, i) => {
-    return {
-      ...testimonial,
-      ...users[i],
-      rating: Math.floor(Math.random() * 2 + 4),
-    };
+  let testimonialsWithData = [];
+  testimonialsWithData = testimonials.map((testimonial, i) => {
+    if (userData) {
+      const { users } = userData;
+      return {
+        ...testimonial,
+        ...users[i],
+        rating: Math.floor(Math.random() * 2 + 4),
+      };
+    }
+    return { id: crypto.randomUUID() };
   });
 
   return (
