@@ -15,12 +15,19 @@ function updateTimes(state, value) {
   state = state.filter((time) => time !== value);
   return state;
 }
-const initialTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+const initialTimes = () => [
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00",
+  "21:00",
+  "22:00",
+];
 
 function App() {
   const [availableTimes, setAvailableTimes] = useReducer(
     updateTimes,
-    initialTimes
+    initialTimes()
   );
 
   return (

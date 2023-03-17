@@ -26,9 +26,9 @@ const specials = [
 ];
 
 const specialsWithIdAndFixedDecimal = specials
-  .map((special) => ({
+  .map((special, i) => ({
     ...special,
-    id: crypto.randomUUID(),
+    id: i,
   }))
   .map((special) => ({ ...special, price: special.price.toFixed(2) }));
 

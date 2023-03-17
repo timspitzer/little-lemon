@@ -37,7 +37,7 @@ export default function TestimonialSection() {
         rating: Math.floor(Math.random() * 2 + 4),
       };
     }
-    return { id: crypto.randomUUID() };
+    return { id: i };
   });
 
   return (
