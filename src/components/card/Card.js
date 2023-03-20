@@ -11,7 +11,7 @@ export default function Card({ title, price, description, img, id }) {
         </div>
         <div className="description">
           <p>{description}</p>
-          <button>Order a delivery </button>
+          <butto aria-label="On Click">Order a delivery </butto>
         </div>
       </div>
     </article>
