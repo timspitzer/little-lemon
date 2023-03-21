@@ -13,7 +13,7 @@ export default function flowHeroSection() {
         </p>
         <img
           className="restauran-food"
-          src="/icons_assets/restauranfood.jpg"
+          src="/restaurant-food.jpg"
           alt="food on plate"
         />
         <button>Reserve a Table</button>

@@ -7,21 +7,21 @@ const specials = [
     description:
       "Craving a fresh and healthy salad? Look no further than our Greek salad! Made with crisp lettuce, juicy tomatoes, sliced cucumbers, and tangy Kalamata olives, our salad is topped with crumbled feta cheese and a zesty vinaigrette dressing.",
     price: 12.99,
-    img: "/icons_assets/greek salad.jpg",
+    img: "/greek-salad.jpg",
   },
   {
     name: "Bruchetta",
     description:
       "Try our bruschetta! Made with freshly toasted bread and topped with a flavorful combination of diced tomatoes, garlic, and basil, it's the perfect blend of savory and tangy.",
     price: 5.99,
-    img: "/icons_assets/bruchetta.svg",
+    img: "/bruchetta.svg",
   },
   {
     name: "Lemon Dessert",
     description:
       "Looking for a tangy dessert? Try our lemon dessert made with fresh lemons for a sweet and sour taste. Perfect for any occasion, it's a refreshing and light option that's sure to please. Order online today and taste the zesty flavors for yourself!",
     price: 5.0,
-    img: "/icons_assets/lemon dessert.jpg",
+    img: "/lemon-dessert.jpg",
   },
 ];
 

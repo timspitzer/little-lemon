@@ -6,7 +6,7 @@ export default function AboutSection() {
       <section>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
-        <p className="highlight-text">
+        <p>
           Welcome to our restaurant, where we are committed to serving the
           highest quality food and providing our customers with a memorable
           dining experience. Our restaurant offers a diverse menu of delicious
@@ -19,13 +19,13 @@ export default function AboutSection() {
       </section>
       <section>
         <img
-          src="/icons_assets/restaurant chef B.jpg"
+          src="/restaurant-chef-b.jpg"
           alt="restaurant chef"
           width="250"
           height="300"
         />
         <img
-          src="/icons_assets/Mario and Adrian A.jpg"
+          src="/mario-and-adrian-a.jpg"
           alt="restaurant chef"
           width="250"
           height="300"

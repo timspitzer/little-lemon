@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="layout">
       <div className="layout-item">
         <section>
-          <img src="/icons_assets/restaurant.jpg" alt="restaureant wide shot" />
+          <img src="/footer-logo.png" alt="little lemon logo" />
         </section>
         <section>
           <h3>Doormat Navigation</h3>
@@ -14,17 +14,18 @@ export default function Footer() {
         <section>
           <h3>Contact</h3>
           <ul>
-            <li>Adress</li>
-            <li>Phone Number</li>
-            <li>Email</li>
+            <li>43 Hazel st. Chicago IL US</li>
+            <li>(+213) 789-792-2679</li>
+            <li>contact@little.lemon.com</li>
           </ul>
         </section>
         <section>
           <h3>Social Media Links</h3>
           <ul>
-            <li>Adress</li>
-            <li>Phone Number</li>
-            <li>Email</li>
+            <li>Follow on Instagram</li>
+            <li>Follow on Twitter</li>
+            <li>Follow on Facebook</li>
+            <li>Subscribe on Youtube</li>
           </ul>
         </section>
       </div>

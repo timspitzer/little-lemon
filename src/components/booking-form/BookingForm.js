@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-export default function BookingForm({
-  availableTimes,
-  setAvailableTimes,
-  submitForm,
-}) {
+function isGuestsStateInvalid(guests) {
+  return guests.length === 0 || 0 === parseInt(guests) || 10 < parseInt(guests);
+}
+
+export default function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState(availableTimes[0]);
   const [guests, setGuests] = useState("1");
@@ -14,14 +14,23 @@ export default function BookingForm({
     event.preventDefault();
     var data = new FormData(event.target);
     let formObject = Object.fromEntries(data.entries());
+    if (formObject.date === "") return;
+    if (formObject.time === "") return;
+    if (isGuestsStateInvalid(formObject.guests)) return;
+    if (
+      formObject.occasion !== "Birthday" ||
+      formObject.occasion !== "Anniversary"
+    )
+      return;
     submitForm(formObject);
-    setAvailableTimes(time);
-    setTime(
-      availableTimes.filter((availableTime) => availableTime !== time)[0]
-    );
     console.log(
       `Date: ${date}, Time: ${time}, Guests: ${guests}, Occasion: ${occasion}`
     );
+  };
+
+  const handleDateChange = (event) => {
+    setDate(event.target.value);
+    dispatch({ type: "update_date", payload: event.target.value });
   };
 
   return (
@@ -37,7 +46,8 @@ export default function BookingForm({
         id="res-date"
         value={date}
         required
-        onChange={(e) => setDate(e.target.value)}
+        onChange={handleDateChange}
+        aria-label="Date input"
       />
       <label htmlFor="res-time">Choose time</label>
       <select
@@ -45,6 +55,7 @@ export default function BookingForm({
         name="res-time"
         value={time}
         required
+        aria-label="Time input"
         onChange={(e) => setTime(e.target.value)}
       >
         {availableTimes.length !== 0 ? (
@@ -59,8 +70,9 @@ export default function BookingForm({
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input
+        aria-label="Number input"
         type="number"
-        name="numberOfGuests"
+        name="guests"
         placeholder="1"
         min="1"
         max="10"
@@ -73,6 +85,7 @@ export default function BookingForm({
       />
       <label htmlFor="occasion">Occasion</label>
       <select
+        aria-label="Occasion select"
         id="occasion"
         name="occasion"
         value={occasion}
@@ -83,13 +96,14 @@ export default function BookingForm({
         <option value="Anniversary">Anniversary</option>
       </select>
       <input
+        aria-label="Make reservation"
+        required
         type="submit"
         value="Make Your reservation"
         disabled={
           availableTimes.length === 0 ||
           date.length === 0 ||
-          0 === parseInt(guests) ||
-          10 < parseInt(guests)
+          isGuestsStateInvalid(guests)
         }
       />
     </form>

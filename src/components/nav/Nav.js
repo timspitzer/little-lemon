@@ -1,26 +1,56 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Nav({ isOpen }) {
   return (
     <nav className={isOpen ? "open" : ""}>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/"
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/about"
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to="/menu">Menu</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/menu"
+          >
+            Menu
+          </NavLink>
         </li>
         <li>
-          <Link to="/reservations">Reservations</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/reservations"
+          >
+            Reservations
+          </NavLink>
         </li>
         <li>
-          <Link to="/order">Order Online</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/order"
+          >
+            Order Online
+          </NavLink>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/login"
+          >
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>

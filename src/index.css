@@ -54,7 +54,7 @@ p {
   font-size: 16px;
   line-height: 1.5;
   max-width: 65ch;
-  color: #333333;
+  color: #495e57;
 }
 
 img {
@@ -81,4 +81,8 @@ button:active {
 .disable-scroll {
   overflow-y: hidden;
   height: 100%;
+}
+
+.active {
+  background-color: #f4ce14;
 }

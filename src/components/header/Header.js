@@ -9,18 +9,10 @@ export default function Header() {
     <header className="layout">
       <div className="layout-item">
         <Link to="/">
-          <img
-            className="logo"
-            src="/icons_assets/logo.svg"
-            alt="Little Lemons Logo"
-          ></img>
+          <img className="logo" src="/logo.svg" alt="Little Lemons Logo"></img>
         </Link>
         <button onClick={() => setIsOpen(!isOpen)}>
-          <img
-            src="/icons_assets/🦆 icon _hamburger menu.svg"
-            alt="hamburger menu icon"
-            width="20"
-          />
+          <img src="/hamburger-icon.svg" alt="hamburger menu icon" width="20" />
         </button>
         <Nav isOpen={isOpen}></Nav>
       </div>

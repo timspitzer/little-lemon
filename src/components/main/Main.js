@@ -6,23 +6,24 @@ import Reservations from "../../pages/reservations/Reservations.js";
 import Menu from "../../pages/menu/Menu.js";
 import BookingConfirmed from "../../pages/booking-confirmed/BookingConfirmed.js";
 import { useState, useReducer, useEffect } from "react";
-import { fetchAPI, submitAPI } from "../../api.js";
+import { fetchAPI, submitAPI } from "../../apis/reservation-api.js";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-function updateTimes(state, value) {
-  state = state.filter((time) => time !== value);
+export function updateTimes(state, action) {
+  if (action.type === "update_date") {
+    const date = new Date(action.payload);
+    return fetchAPI(date);
+  }
+
   return state;
 }
 
-function initializeTimes() {
+export function initializeTimes() {
   return fetchAPI(new Date());
 }
 
 export default function Main() {
-  const [availableTimes, setAvailableTimes] = useReducer(
-    updateTimes,
-    initializeTimes()
-  );
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const navigate = useNavigate();
 
@@ -34,6 +35,8 @@ export default function Main() {
     if (isFormSubmitted) {
       navigate("/confirmed");
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFormSubmitted]);
 
   return (
@@ -48,7 +51,7 @@ export default function Main() {
           element={
             <Reservations
               availableTimes={availableTimes}
-              setAvailableTimes={setAvailableTimes}
+              dispatch={dispatch}
               submitForm={submitForm}
             />
           }
